@@ -1,4 +1,4 @@
-package com.firb.doeat;
+package com.firb.doeat.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
