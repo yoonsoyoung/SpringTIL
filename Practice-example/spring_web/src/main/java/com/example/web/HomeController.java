@@ -38,4 +38,9 @@ public class HomeController {
 		return mav;
 	}
 	
+	@GetMapping("/form")
+	public String form() { // 단순 이동, 뷰의 이름만 리턴
+		return "Step02/form"; 
+	}
+	
 }
