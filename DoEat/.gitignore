@@ -9,7 +9,8 @@ pom.properties
 .classpath
 MANIFEST.MF
 Servers/
-*.xml
+config.properties
+.project
 
 ### Eclipse ###
 .metadata
