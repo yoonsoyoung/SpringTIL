@@ -4,12 +4,13 @@
 ### Spring ###
 log4j.xml
 
-target
+.target/
 pom.properties
 .classpath
+.project
 MANIFEST.MF
 Servers/
-*.xml
+config.properties
 
 ### Eclipse ###
 .metadata
