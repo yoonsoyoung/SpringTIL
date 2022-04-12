@@ -8,10 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.web.dto.ParamDto;
 import com.example.web.service.HelloService;
 @Controller
 public class HomeController {
@@ -39,8 +41,19 @@ public class HomeController {
 	}
 	
 	@GetMapping("/form")
-	public String form() { // ´Ü¼ø ÀÌµ¿, ºäÀÇ ÀÌ¸§¸¸ ¸®ÅÏ
-		return "Step02/form"; 
+	public String form() { // ë‹¨ìˆœ ì´ë™, ë·°ì˜ ì´ë¦„ë§Œ ë¦¬í„´
+		return "step02/form"; 
 	}
 	
+	@GetMapping("/sendparam")
+	public String param(@RequestParam String userid, @RequestParam String username, @RequestParam String area) {
+		System.out.println(userid + " " + username + " " + area);
+		return "step02/form";
+	}
+
+	@PostMapping("/sendparam")
+	public String param(ParamDto paramDto, Model model) {
+		model.addAttribute("userinfo", paramDto); // "userinfo" ì—ë‹¤ê°€ paramDtoë¥¼ ë‹´ì•„ë¼
+		return "step02/result";
+	}
 }

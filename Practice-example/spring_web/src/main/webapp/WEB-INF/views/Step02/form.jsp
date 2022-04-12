@@ -1,9 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="root" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -24,65 +26,61 @@
 <body>
 	<div class="container">
 		<div class="col-lg-6">
-			<h5 class="text-center title">SpringÀ» ÀÌ¿ëÇÑ ÆÄ¶ó¹ÌÅÍ Àü´Þ(Single)</h5>
+			<h5 class="text-center title">Springì„ ì´ìš©í•œ íŒŒë¼ë¯¸í„° ì „ë‹¬(Single)</h5>
 			<form name="paramform" method="get" action="${root }/sendparam">
 				<div class="form-group">
-					<label for="userid">¾ÆÀÌµð:</label> 
-					<input type="text" class="form-control" name="userid"
-						placeholder="¾ÆÀÌµð ÀÔ·Â">
+					<label for="userid">ì•„ì´ë””:</label> <input type="text"
+						class="form-control" name="userid" placeholder="ì•„ì´ë”” ìž…ë ¥">
 				</div>
 				<div class="form-group">
-					<label for="username">ÀÌ¸§:</label> 
-					<input type="text" class="form-control" name="username"
-						placeholder="ÀÌ¸§ ÀÔ·Â">
+					<label for="username">ì´ë¦„:</label> <input type="text"
+						class="form-control" name="username" placeholder="ì´ë¦„ ìž…ë ¥">
 				</div>
 				<div class="form-group">
-					<label for="area">Áö¿ª:</label> 
-					<select name="area" class="custom-select">
-						<option value="0" selected>´ëÀü</option>
-						<option value="1">¼­¿ï</option>
-						<option value="2">±¤ÁÖ</option>
-						<option value="3">±¸¹Ì</option>
+					<label for="area">ì§€ì—­:</label> <select name="area"
+						class="custom-select">
+						<option value="0" selected>ëŒ€ì „</option>
+						<option value="1">ì„œìš¸</option>
+						<option value="2">ê´‘ì£¼</option>
+						<option value="3">êµ¬ë¯¸</option>
 					</select>
 				</div>
-				<button type="submit" class="btn btn-primary">Àü¼Û</button>
+				<button type="submit" class="btn btn-primary">ì „ì†¡</button>
 			</form>
 		</div>
 		<div class="col-lg-6 mt-4">
-			<h5 class="text-center title">SpringÀ» ÀÌ¿ëÇÑ ÆÄ¶ó¹ÌÅÍ Àü´Þ(multi)</h5>
-			<form name="paramform" method="get" action="${root }/sendparam">
+			<h5 class="text-center title">Springì„ ì´ìš©í•œ íŒŒë¼ë¯¸í„° ì „ë‹¬(multi)</h5>
+			<form name="paramform" method="post" action="${root }/sendparam">
 				<div class="form-group">
-					<label for="userid">¾ÆÀÌµð:</label> 
-					<input type="text" class="form-control" name="userid"
-						placeholder="¾ÆÀÌµð ÀÔ·Â">
+					<label for="userid">ì•„ì´ë””:</label> <input type="text"
+						class="form-control" name="userid" placeholder="ì•„ì´ë”” ìž…ë ¥">
 				</div>
 				<div class="form-group">
-					<label for="username">ÀÌ¸§:</label> 
-					<input type="text" class="form-control" name="username"
-						placeholder="ÀÌ¸§ ÀÔ·Â">
+					<label for="username">ì´ë¦„:</label> <input type="text"
+						class="form-control" name="username" placeholder="ì´ë¦„ ìž…ë ¥">
 				</div>
 				<div class="form-group">
-					<label for="area">ÁÁ¾ÆÇÏ´Â °úÀÏ:</label> 
+					<label for="">ì¢‹ì•„í•˜ëŠ” ê³¼ì¼:</label>
 					<div>
 						<div class="form-check-inline">
-						  <label class="form-check-label">
-						    <input type="checkbox" class="form-check-input" value="strawberry">µþ±â
-						  </label>
+							<label class="form-check-label"> <input type="checkbox"
+								class="form-check-input" value="ë”¸ê¸°" name="fruit">ë”¸ê¸°
+							</label>
 						</div>
 						<div class="form-check-inline">
-						  <label class="form-check-label">
-						    <input type="checkbox" class="form-check-input" value="watermelon">¼ö¹Ú
-						  </label>
+							<label class="form-check-label"> <input type="checkbox"
+								class="form-check-input" value="ìˆ˜ë°•" name="fruit">ìˆ˜ë°•
+							</label>
 						</div>
 						<div class="form-check-inline">
-						  <label class="form-check-label">
-						    <input type="checkbox" class="form-check-input" value="grape">Æ÷µµ
-						  </label>
+							<label class="form-check-label"> <input type="checkbox"
+								class="form-check-input" value="í¬ë„" name="fruit">í¬ë„
+							</label>
 						</div>
 						<div class="form-check-inline">
-						  <label class="form-check-label">
-						    <input type="checkbox" class="form-check-input" value="apple">»ç°ú
-						  </label>
+							<label class="form-check-label"> <input type="checkbox"
+								class="form-check-input" value="ì‚¬ê³¼" name="fruit">ì‚¬ê³¼
+							</label>
 						</div>
 					</div>
 				</div>
@@ -94,10 +92,11 @@
 </html>
 
 <style type="text/css">
-.container > div {
+.container>div {
 	margin: 0 auto;
 	margin-top: 50px;
 }
+
 .title {
 	padding: 10px;
 }
