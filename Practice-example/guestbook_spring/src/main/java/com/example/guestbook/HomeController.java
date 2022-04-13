@@ -1,4 +1,4 @@
-package com.firb.doeat.controller;
+package com.example.guestbook;
 
 import java.text.DateFormat;
 import java.util.Date;
