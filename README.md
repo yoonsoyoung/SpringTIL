@@ -9,7 +9,7 @@
 
 ### DoEat (~ing)
 
-- Spring Legacy Project
+- Spring Boot + React Project
 - 회사 건물 음식점 및 카페 정보, 게시판
 
 ### Practice-example (~ing)
