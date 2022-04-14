@@ -12,14 +12,15 @@
 	<context:component-scan base-package="com.example.guestbook.model, com.example.guestbook.aop" />
 
 	<!-- config파일 자동 로드 location="classpath:database.properties"  /!-->
-    <context:property-placeholder location="/config/*.properties" /> 
+    <context:property-placeholder location="classpath:../config/config.properties" /> 
 
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
-	<bean id="ds" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driverClass" value="${db.driverClass}" />
-		<property name="url" value="${db.url}" />
-		<property name="username" value="${db.username}" />
-		<property name="password" value="${db.password}" />
+ 	<bean id="ds" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="${spring.datasource.driverClass}" />
+		<property name="url" value="${spring.datasource.url}" />
+		<property name="username" value="${spring.datasource.username}" />
+		<property name="password" value="${spring.datasource.password}" />
 	</bean>
+
 </beans>
